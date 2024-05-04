@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEATHER App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <h1 class="heading">WEATHER APP</h1>
+
+        <div class="tab_container">
+            <div class="tab curr" onclick="handleTab('user')" data-userWeather>Your Weather</div>
+            <div class="tab" 
+           onclick="handleTab('search')" data-searchWeather>Search Weather</div>
+        </div>
+
+        <div class="weather-container">
+            <!-- grant location container -->
+                <div class="grant-location-conatiner">
+                    <img src="Location_weather-01.png" alt="" loading="lazy" width="80" height="80">
+                    <p class="para1">Grant Location Access</p>
+                    <p class="para2">Allow Access To Weather Information</p>
+                    <button class="btn" data-grantAccess>Grant Access</button>
+                </div>
+
+                <!-- Search Form -->
+                <div class="form-container hide" data-searchForm>
+                    <div>
+                    <input type="text" placeholder="Search For City..." data-searchInput>
+                    <button class="btn_search" search-city>
+                        <img src="Search_weather-02.png" alt="" width="40" height="40" loading="lazy">
+                    </button></div>
+                </div>
+
+                <!-- Loading Container -->
+                <div class="loading-container hide">
+                    <img src="Loading_weading-03.gif" alt="" height="150" width="150">
+                    <p>Loading...</p>
+                </div>
+
+                <!-- Show weather info -->
+                <div class="user-info-container hide">
+
+                    <!-- city name and flag -->
+                    <div class="c_name">
+                        <p data-cityName></p>
+                        <img src="humidity-weather-05.png" alt="" height="50px" width="50px" data-country-icon>
+                    </div>
+
+                        <!-- Weather Discription -->
+
+                    <p class="para3" data-weatherDesc></p>
+                    <!-- weather-Icon -->
+
+                    <img src="humidity-weather-05.png" alt="" height="50px" width="50px" data-weather-icon>
+                    <!-- Temprature -->
+
+                    <p class="para4" data-temp></p>
+
+
+                    <!-- 3-Card Parameter -->
+                    <div class="paramete_parent"> 
+                        <div class="parameter">
+                            <img src="windspeed-weather-04.png" alt="" height="50" width="50">
+                            <p>Wind Speed</p>
+                            <p data-windspeed></p>
+                        </div>
+
+                        <div class="parameter">
+                            <img src="humidity-weather-05.png" alt="" height="50" width="50">
+                            <p>Humidity</p>
+                            <p data-humidity></p>
+                        </div>
+
+                        <div class="parameter">
+                            <img src="clouds_weather-06.png" alt="" height="50" >
+                            <p>Cloud</p>
+                            <p data-cloud></p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+        </div>
+    </div>
+
+
+
+
+
+    <script src="weather.js"></script>
+</body>
+</html>
